@@ -1,10 +1,4 @@
-using System;
-using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Possession : MonoBehaviour
 {
@@ -15,14 +9,13 @@ public class Possession : MonoBehaviour
 
     [SerializeField] private PlayerControllers playcont;
 
-    private BoxCollider2D _boxCol;
 
     [SerializeField] private float speedMove;
 
     [SerializeField] private LayerMask detectWall;
     [SerializeField] private float wallDist = 1f;
 
-    private PlayerControllers _controller;
+    private CapsuleCollider2D _col2d;
 
     public enum OBJECTS
     {
@@ -35,45 +28,38 @@ public class Possession : MonoBehaviour
 
     void Start()
     {
-        if(emission == null)
+        if (emission == null)
         {
             return;
         }
-        _boxCol = GetComponent<BoxCollider2D>();
-        _controller = GetComponent<PlayerControllers>();
-        emission = GetComponent<GameObject>();
+        _col2d = emission.GetComponent<CapsuleCollider2D>();
+        
         playcont = GetComponent<PlayerControllers>();
 
+        
+        _col2d.enabled = false; 
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (toucher == true && Input.GetKeyDown(KeyCode.E))
-        //{
-        //    possessing = true;
-        //    _boxCol.isTrigger = true;
-
-
-        //    player.transform.position = transform.position;
-
-        //}
-
-        //if (possessing == true && Input.GetButton("Horizontal"))
-        //    Move();
-
-        //if (possessing == true && Input.GetKeyDown(KeyCode.R)) 
-        //{
-        //    _boxCol.isTrigger = false;
-        //    possessing = false;
-        //}
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             possessing = false ;
-            playcont.canJump = true;
-            playcont.canMove = true;
+            if(playcont != null)
+            {
+                playcont.canJump = true;
+                playcont.canMove = true;
+            }
+            
+
+            if (emission != null) 
+            {
+                _col2d.enabled = false;
+            }
+            
         }
 
         if (possessing == true)
@@ -87,7 +73,8 @@ public class Possession : MonoBehaviour
             }
             else if (_objects == OBJECTS.TV) 
             {
-                
+                Debug.Log("TVS");
+                _col2d.enabled = true ;
             }
         }
 

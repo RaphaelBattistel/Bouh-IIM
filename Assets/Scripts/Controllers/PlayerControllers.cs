@@ -55,7 +55,7 @@ public class PlayerControllers : MonoBehaviour
         TryGetComponent(out _spriteRend);
         TryGetComponent(out possession);
 
-        
+
     }
 
     private void FixedUpdate()

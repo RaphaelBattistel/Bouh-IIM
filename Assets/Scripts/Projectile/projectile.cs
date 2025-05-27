@@ -9,6 +9,7 @@ public class projectile : MonoBehaviour {
 
     [SerializeField] private float attractionForce = 10f;
     public float lifeTime = 5.0f;   // Le temps maximal que vivra le projectile (pour être sur qu'il se détruise au bout d'un moment)
+    public Possession PossesProj;
 
     private void Start() {
         Destroy(gameObject, lifeTime);
@@ -30,6 +31,14 @@ public class projectile : MonoBehaviour {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Object"))
         {
             transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, attractionForce * Time.deltaTime);
+            // Tente de récupérer le script Possession sur l'objet touché
+            PossesProj = collision.gameObject.GetComponent<Possession>();
+
+            // Si trouvé, alors on peut appeler une fonction dessus
+            if (PossesProj != null)
+            {
+                Debug.Log("Possession détectée !");
+            }
         }
     }
 
