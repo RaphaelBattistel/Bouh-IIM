@@ -5,18 +5,25 @@ TagManager:
   serializedVersion: 3
   tags:
   - Object
+  - Box
+  - TV
+  - Shoot
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Enemy
   - Ground
   - Player
   - Wall
-  - 
+  - Emission
+  - Enemy
+  - Player
+  - Object
+  - Win
   - 
   - 
   - 
