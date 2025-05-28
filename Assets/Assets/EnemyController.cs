@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator playerchecker()
     {
-        if (Physics2D.OverlapCapsule(playercheck.position, new Vector2(.5f,.1f), CapsuleDirection2D.Horizontal, 0, playerlayer)&&isDying==true)
+        if (Physics2D.OverlapCapsule(playercheck.position, new Vector2(.5f,.1f), CapsuleDirection2D.Horizontal, 0, playerlayer))
         {
             isDying=true;
             yield return new WaitForSeconds(0.2f);
