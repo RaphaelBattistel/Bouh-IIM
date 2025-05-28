@@ -15,29 +15,29 @@ public class projectile : MonoBehaviour {
         Destroy(gameObject, lifeTime);
     }
 
-    // La fonction OnTriggerEnter s'enclenche quand votre Trigger touche un autre collider/trigger
-    void OnTriggerEnter2D(Collider2D collision) {
-        
-    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!collision.isTrigger && collision.tag != "Player")              // Sinon si on touche un mur (un collider qui n'est PAS un trigger) et que ce n'est pas le joueur
+        if (!collision.isTrigger && collision.tag != "Player")
         {
-            Destroy(gameObject);        // On détruit simplement le projectile
+            Destroy(gameObject);
         }
-
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Object"))
         {
-            transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, attractionForce * Time.deltaTime);
-            // Tente de récupérer le script Possession sur l'objet touché
             PossesProj = collision.gameObject.GetComponent<Possession>();
 
-            // Si trouvé, alors on peut appeler une fonction dessus
             if (PossesProj != null)
             {
-                Debug.Log("Possession détectée !");
+                // Récupère le joueur dans la scène
+                PlayerControllers player = FindObjectOfType<PlayerControllers>();
+
+                // Active la possession
+                PossesProj.StartPossession(player);
+
+                // Détruire le projectile
+                Destroy(gameObject);
             }
         }
     }

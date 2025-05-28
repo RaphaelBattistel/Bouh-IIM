@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 
@@ -14,6 +10,7 @@ public class PlayerControllers : MonoBehaviour
     private Collider2D _collider2D;
 
     public Possession possession;
+    public projectile projectile;
 
     private SpriteRenderer _spriteRend;
     private Transform _transform;
@@ -54,6 +51,7 @@ public class PlayerControllers : MonoBehaviour
         TryGetComponent(out _rb2d);
         TryGetComponent(out _spriteRend);
         TryGetComponent(out possession);
+        TryGetComponent(out projectile);
 
 
     }
@@ -63,7 +61,7 @@ public class PlayerControllers : MonoBehaviour
         slowFall();
         new Vector2(_rb2d.linearVelocity.x, fallingSpeed * _rb2d.linearVelocity.y);
 
-        if (possession == null)
+        if (possession == null || projectile == null)
             return;
     }
 
@@ -158,12 +156,14 @@ public class PlayerControllers : MonoBehaviour
         }
         
     }
-    private void OnTriggerExit2D(UnityEngine.Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-            SetDamage(-1);
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Win"))
+            GameManager.instance.Win();
     }
+
+
 
 
 }
