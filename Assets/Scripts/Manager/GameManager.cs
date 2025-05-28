@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        WinText.gameObject.SetActive(false);
         if (instance == null)
             instance = this;
         else

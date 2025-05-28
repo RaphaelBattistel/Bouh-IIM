@@ -22,15 +22,20 @@ public class PlayerController : MonoBehaviour
     public float stamina;
     public float staminaLeft;
     public EnemyController EnemyController;
+    public bool isPossessing = false;
+    public Transform possessionTarget;
     public float maxHp;
     public float currentHp;
     private bool isdead;
     public bool canMove = true;
     public Transform lastChekpoint;
+    public Collider2D myCollider;
     public GameObject staminaBar;
+    public bool canJump = true;
     public GameObject hearth1;
     public GameObject hearth2;
     public GameObject hearth3;
+    public bool canBeHurted = true;
 
     void Start()
     {
@@ -38,6 +43,8 @@ public class PlayerController : MonoBehaviour
         staminaLeft = stamina;
         isdead = false;
         lastChekpoint.position = transform.position;
+        canBeHurted = true;
+        isPossessing = false;
     }
     public void movement(InputAction.CallbackContext context)
     {
@@ -90,6 +97,7 @@ public class PlayerController : MonoBehaviour
         {
             staminaBar.transform.localScale = new Vector2(staminaLeft / stamina, staminaBar.transform.localScale.y);
         }
+        isControlling();
     }
 
 
@@ -130,9 +138,16 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-    bool IsGrounded()
+    public bool IsGrounded()
     {
-        return Physics2D.OverlapCapsule(groundCheck.position, new Vector2(.5f, .1f), CapsuleDirection2D.Horizontal, 0, groundLayer);
+        if (canJump)
+        {
+            return Physics2D.OverlapCapsule(groundCheck.position, new Vector2(.5f, .1f), CapsuleDirection2D.Horizontal, 0, groundLayer);
+        }
+        else
+        {
+            return false;
+        }
     }
     void bump()
     {
@@ -140,6 +155,25 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpower);
             staminaLeft = stamina;
+        }
+    }
+    public void isControlling()
+    {
+        if (isPossessing)
+        {
+            Color currentColor = skin.color;
+            currentColor.a = 0;
+            skin.color = currentColor;
+            myCollider.isTrigger = true;
+            transform.position = possessionTarget.position;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+        }
+        else
+        {
+            Color currentColor = skin.color;
+            currentColor.a = 1;
+            skin.color = currentColor;
+            myCollider.isTrigger = false;
         }
     }
     void IsFalling()
@@ -164,7 +198,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") && canBeHurted)
         {
             canMove = false;
             if (currentHp != 1)
@@ -188,6 +222,11 @@ public class PlayerController : MonoBehaviour
                 dead();
             }
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Win"))
+        {
+            GameManager.instance.Win();
+            canMove = false;
+        }
     }
     IEnumerator delay1(float time)
     {
@@ -201,9 +240,9 @@ public class PlayerController : MonoBehaviour
             horizontal = -2.5f;
         }
     }
-        
-    
-        IEnumerator delay3(float time)
+
+
+    IEnumerator delay3(float time)
     {
         yield return new WaitForSeconds(time);
         if (horizontal > 0)
@@ -220,5 +259,6 @@ public class PlayerController : MonoBehaviour
     {
         lastChekpoint.position = transform.position;
     }
+    
     
 }

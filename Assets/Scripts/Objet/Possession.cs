@@ -7,7 +7,7 @@ public class Possession : MonoBehaviour
 
     [SerializeField] private GameObject emission;
 
-    [SerializeField] private PlayerControllers playcont;
+    [SerializeField] private PlayerController playcont;
 
 
     [SerializeField] private float speedMove;
@@ -22,7 +22,7 @@ public class Possession : MonoBehaviour
     [SerializeField] private float maxFall = 2;
     private float lastY;
     private float fallSpeed;
-
+    public Rigidbody2D rb;
     private CapsuleCollider2D _caps2d;
     private Collider2D _col2d; 
 
@@ -45,7 +45,7 @@ public class Possession : MonoBehaviour
         
 
         _col2d = GetComponent<Collider2D>();
-        playcont = GetComponent<PlayerControllers>();
+        playcont = GetComponent<PlayerController>();
 
 
         _caps2d.enabled = false;
@@ -55,7 +55,7 @@ public class Possession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)&&possessing)
         {
             ReleasePossession();
         }
@@ -65,13 +65,15 @@ public class Possession : MonoBehaviour
 
         if (possessing == true)
         {
-            playcont.canJump = false ;
-            playcont.canMove = false ;
+            playcont.canJump = false;
+            playcont.canMove = false;
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+
 
             if (_objects == OBJECTS.BOX || _objects == OBJECTS.VASE)
             {
                 Move();
-                if(_objects == OBJECTS.BOX)
+                if (_objects == OBJECTS.BOX)
                 {
                     Debug.Log("box");
                 }
@@ -79,40 +81,46 @@ public class Possession : MonoBehaviour
                 {
                     if (!wasGrounded && grounded)
                     {
-                        // Atterrissage détecté, on vérifie la vitesse de chute
+                        // Atterrissage dï¿½tectï¿½, on vï¿½rifie la vitesse de chute
                         if (fallSpeed > maxFall && !isBrocken)
                         {
                             isBrocken = true;
                             _caps2d.enabled = true;
-                            Debug.Log("Le vase est cassé (sans Rigidbody2D)");
-                            
+                            Debug.Log("Le vase est cassï¿½ (sans Rigidbody2D)");
+
                         }
                         else
                         {
-                            Debug.Log("pas cassé");
+                            Debug.Log("pas cassï¿½");
                         }
                     }
                     wasGrounded = grounded;
                 }
             }
-            else if (_objects == OBJECTS.TV) 
+            else if (_objects == OBJECTS.TV)
             {
                 Debug.Log("TVS");
-                _caps2d.enabled = true ;
+                _caps2d.enabled = true;
             }
+
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
         }
 
     }
+    
    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            grounded = true ;
+            grounded = true;
         }
-        
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -147,10 +155,13 @@ public class Possession : MonoBehaviour
         transform.position += Vector3.right * Input.GetAxisRaw("Horizontal") * speedMove * Time.deltaTime;
     }
 
-    public void StartPossession(PlayerControllers player)
+    public void StartPossession(PlayerController player)
     {
         possessing = true;
         playcont = player;
+        playcont.isPossessing = true;
+        playcont.possessionTarget = transform;
+        playcont.canBeHurted = false;
 
         if (playcont != null)
         {
@@ -161,12 +172,14 @@ public class Possession : MonoBehaviour
         if (_caps2d != null)
             _caps2d.enabled = true;
 
-        Debug.Log("Possession démarrée");
+        Debug.Log("Possession dï¿½marrï¿½e");
     }
 
     private void ReleasePossession()
     {
         possessing = false;
+        playcont.canBeHurted = true;
+        playcont.isPossessing = false;
 
         if (playcont != null)
         {
@@ -179,6 +192,6 @@ public class Possession : MonoBehaviour
             _caps2d.enabled = false;
         }
 
-        Debug.Log("Possession terminée.");
+        Debug.Log("Possession terminï¿½e.");
     }
 }

@@ -31,7 +31,7 @@ public class projectile : MonoBehaviour {
             if (PossesProj != null)
             {
                 // Récupère le joueur dans la scène
-                PlayerControllers player = FindObjectOfType<PlayerControllers>();
+                PlayerController player = FindObjectOfType<PlayerController>();
 
                 // Active la possession
                 PossesProj.StartPossession(player);

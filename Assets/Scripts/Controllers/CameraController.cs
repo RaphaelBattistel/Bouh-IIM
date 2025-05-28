@@ -19,14 +19,10 @@ namespace A1_24_25
 
         private void Awake()
         {
-            _target = FindObjectOfType<PlayerControllers>().transform;
+            // _target = FindObjectOfType<PlayerController>().transform;
             _target.TryGetComponent(out _player);
         }
 
-        void Start()
-        {
-        
-        }
 
         void Update()
         {
