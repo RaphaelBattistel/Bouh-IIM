@@ -9,27 +9,36 @@ public class projectile : MonoBehaviour {
 
     [SerializeField] private float attractionForce = 10f;
     public float lifeTime = 5.0f;   // Le temps maximal que vivra le projectile (pour être sur qu'il se détruise au bout d'un moment)
+    public Possession PossesProj;
 
     private void Start() {
         Destroy(gameObject, lifeTime);
     }
 
-    // La fonction OnTriggerEnter s'enclenche quand votre Trigger touche un autre collider/trigger
-    void OnTriggerEnter2D(Collider2D collision) {
-        
-    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!collision.isTrigger && collision.tag != "Player")              // Sinon si on touche un mur (un collider qui n'est PAS un trigger) et que ce n'est pas le joueur
+        if (!collision.isTrigger && collision.tag != "Player")
         {
-            Destroy(gameObject);        // On détruit simplement le projectile
+            Destroy(gameObject);
         }
-
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Object"))
         {
-            transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, attractionForce * Time.deltaTime);
+            PossesProj = collision.gameObject.GetComponent<Possession>();
+
+            if (PossesProj != null)
+            {
+                // Récupère le joueur dans la scène
+                PlayerControllers player = FindObjectOfType<PlayerControllers>();
+
+                // Active la possession
+                PossesProj.StartPossession(player);
+
+                // Détruire le projectile
+                Destroy(gameObject);
+            }
         }
     }
 

@@ -1,10 +1,4 @@
-using System;
-using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Possession : MonoBehaviour
 {
@@ -15,14 +9,22 @@ public class Possession : MonoBehaviour
 
     [SerializeField] private PlayerControllers playcont;
 
-    private BoxCollider2D _boxCol;
 
     [SerializeField] private float speedMove;
 
     [SerializeField] private LayerMask detectWall;
     [SerializeField] private float wallDist = 1f;
 
-    private PlayerControllers _controller;
+    [SerializeField] private bool grounded = false;
+    [SerializeField] private bool wasGrounded = false;
+
+    [SerializeField] private bool isBrocken = false;
+    [SerializeField] private float maxFall = 2;
+    private float lastY;
+    private float fallSpeed;
+
+    private CapsuleCollider2D _caps2d;
+    private Collider2D _col2d; 
 
     public enum OBJECTS
     {
@@ -35,60 +37,70 @@ public class Possession : MonoBehaviour
 
     void Start()
     {
-        if(emission == null)
+        if (emission == null)
         {
             return;
         }
-        _boxCol = GetComponent<BoxCollider2D>();
-        _controller = GetComponent<PlayerControllers>();
-        emission = GetComponent<GameObject>();
+        _caps2d = emission.GetComponent<CapsuleCollider2D>();
+        
+
+        _col2d = GetComponent<Collider2D>();
         playcont = GetComponent<PlayerControllers>();
 
-        
+
+        _caps2d.enabled = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (toucher == true && Input.GetKeyDown(KeyCode.E))
-        //{
-        //    possessing = true;
-        //    _boxCol.isTrigger = true;
-
-
-        //    player.transform.position = transform.position;
-
-        //}
-
-        //if (possessing == true && Input.GetButton("Horizontal"))
-        //    Move();
-
-        //if (possessing == true && Input.GetKeyDown(KeyCode.R)) 
-        //{
-        //    _boxCol.isTrigger = false;
-        //    possessing = false;
-        //}
-
         if (Input.GetKeyDown(KeyCode.R))
         {
-            possessing = false ;
-            playcont.canJump = true;
-            playcont.canMove = true;
+            ReleasePossession();
         }
+
+        fallSpeed = lastY - transform.position.y;
+        lastY = transform.position.y;
 
         if (possessing == true)
         {
             playcont.canJump = false ;
             playcont.canMove = false ;
-            if (_objects == OBJECTS.BOX)
+
+            if (_objects == OBJECTS.BOX || _objects == OBJECTS.VASE)
             {
-                Debug.Log("box");
                 Move();
+                if(_objects == OBJECTS.BOX)
+                {
+                    Debug.Log("box");
+                }
+                else if (_objects == OBJECTS.VASE)
+                {
+                    if (!wasGrounded && grounded)
+                    {
+                        // Atterrissage détecté, on vérifie la vitesse de chute
+                        if (fallSpeed > maxFall && !isBrocken)
+                        {
+                            isBrocken = true;
+                            _caps2d.enabled = true;
+                            Debug.Log("Le vase est cassé (sans Rigidbody2D)");
+                            
+                        }
+                        else
+                        {
+                            Debug.Log("pas cassé");
+                        }
+                    }
+                    wasGrounded = grounded;
+                }
             }
             else if (_objects == OBJECTS.TV) 
             {
-                
+                Debug.Log("TVS");
+                _caps2d.enabled = true ;
             }
+
         }
 
     }
@@ -96,20 +108,29 @@ public class Possession : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Shoot")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            
+            grounded = true ;
+        }
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            grounded = false;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Shoot")
-        {
-            possessing = true;
-            Debug.Log("il est 1h du zbah, marches un peu!");
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Shoot")
+    //    {
+    //        possessing = true;
+    //        Debug.Log("il est 1h du zbah, marches un peu!");
+    //    }
+    //}
 
 
     private void Move()
@@ -126,5 +147,38 @@ public class Possession : MonoBehaviour
         transform.position += Vector3.right * Input.GetAxisRaw("Horizontal") * speedMove * Time.deltaTime;
     }
 
+    public void StartPossession(PlayerControllers player)
+    {
+        possessing = true;
+        playcont = player;
 
+        if (playcont != null)
+        {
+            playcont.canJump = false;
+            playcont.canMove = false;
+        }
+
+        if (_caps2d != null)
+            _caps2d.enabled = true;
+
+        Debug.Log("Possession démarrée");
+    }
+
+    private void ReleasePossession()
+    {
+        possessing = false;
+
+        if (playcont != null)
+        {
+            playcont.canJump = true;
+            playcont.canMove = true;
+        }
+
+        if (_caps2d != null)
+        {
+            _caps2d.enabled = false;
+        }
+
+        Debug.Log("Possession terminée.");
+    }
 }

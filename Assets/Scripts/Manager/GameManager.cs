@@ -1,17 +1,21 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
-    public static GameManager Instance => _instance;
+    public static GameManager instance;
+    
 
     private List<BlocController> blocs = new();
 
+    public TextMeshProUGUI WinText;
+
     private void Awake()
     {
-        if (_instance == null)
-            _instance = this;
+        if (instance == null)
+            instance = this;
         else
             Destroy(gameObject);
 
@@ -26,5 +30,10 @@ public class GameManager : MonoBehaviour
         {
             bc.IsMoved = !bc.IsMoved;
         }
+    }
+
+    public void Win()
+    {
+        WinText.gameObject.SetActive(true);
     }
 }
