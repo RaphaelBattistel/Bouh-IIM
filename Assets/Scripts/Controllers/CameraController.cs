@@ -39,7 +39,7 @@ namespace A1_24_25
             Vector3 targetPos;
             if (_smoothTime <= 0)
             {
-                var speedDelta = _player ? _player.Stat.speedMove : 5;
+                var speedDelta = _player ? _player.speed : 5;
                 targetPos = Vector2.MoveTowards(transform.position, targetOut, Time.deltaTime * speedDelta);
             }
             else

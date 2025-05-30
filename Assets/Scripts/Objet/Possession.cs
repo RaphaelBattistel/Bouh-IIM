@@ -73,11 +73,8 @@ public class Possession : MonoBehaviour
             if (_objects == OBJECTS.BOX || _objects == OBJECTS.VASE)
             {
                 Move();
-                if (_objects == OBJECTS.BOX)
-                {
-                    Debug.Log("box");
-                }
-                else if (_objects == OBJECTS.VASE)
+
+                if (_objects == OBJECTS.VASE)
                 {
                     if (!wasGrounded && grounded)
                     {
@@ -86,12 +83,7 @@ public class Possession : MonoBehaviour
                         {
                             isBrocken = true;
                             _caps2d.enabled = true;
-                            Debug.Log("Le vase est cass� (sans Rigidbody2D)");
 
-                        }
-                        else
-                        {
-                            Debug.Log("pas cass�");
                         }
                     }
                     wasGrounded = grounded;
@@ -99,7 +91,6 @@ public class Possession : MonoBehaviour
             }
             else if (_objects == OBJECTS.TV)
             {
-                Debug.Log("TVS");
                 _caps2d.enabled = true;
             }
 
@@ -172,7 +163,6 @@ public class Possession : MonoBehaviour
         if (_caps2d != null)
             _caps2d.enabled = true;
 
-        Debug.Log("Possession d�marr�e");
     }
 
     private void ReleasePossession()
@@ -192,6 +182,5 @@ public class Possession : MonoBehaviour
             _caps2d.enabled = false;
         }
 
-        Debug.Log("Possession termin�e.");
     }
 }
