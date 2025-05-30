@@ -5,40 +5,64 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpower;
+    [Header("JUMP")]
+    [SerializeField] private float jumpower;
     public float speed;
-    public float fallingSpeed;
-    public float fallingDirection;
-    public Rigidbody2D rb;
-    public LayerMask groundLayer;
-    public LayerMask enemyLayer;
-    public LayerMask wallLayer;
-    public Transform groundCheck;
-    public SpriteRenderer skin;
+    [SerializeField] private float fallingSpeed;
+    [SerializeField] private float fallingDirection;
+    public bool canJump = true;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+
+
+    [Header("MOVE")]
+    public bool canMove = true;
     float horizontal;
-    public bool walltriger;
+
+    [Header("WALL")]
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private bool walltriger;
     public bool wallcheck;
-    public bool walltoggle;
-    public float stamina;
-    public float staminaLeft;
-    public EnemyController EnemyController;
+    [SerializeField] private bool walltoggle;
+
+    [Header("STAMINA")]
+    [SerializeField] private float stamina;
+    [SerializeField] private float staminaLeft;
+    [SerializeField] private GameObject staminaBar;
+
+    [Header("LIFE")]
+    [SerializeField] private float maxHp;
+    [SerializeField] private float currentHp;
+    private bool isdead;
+    public bool canBeHurted = true;
+    [SerializeField] private GameObject hearth1;
+    [SerializeField] private GameObject hearth2;
+    [SerializeField] private GameObject hearth3;
+    [SerializeField] private Transform lastChekpoint;
+
+    [Header("ENEMY")]
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private EnemyController EnemyController;
+
+    [Header("POSSESS")]
     public bool isPossessing = false;
     public Transform possessionTarget;
-    public float maxHp;
-    public float currentHp;
-    private bool isdead;
-    public bool canMove = true;
-    public Transform lastChekpoint;
-    public Collider2D myCollider;
-    public GameObject staminaBar;
-    public bool canJump = true;
-    public GameObject hearth1;
-    public GameObject hearth2;
-    public GameObject hearth3;
-    public bool canBeHurted = true;
+
+    private SpriteRenderer skin;
+    private Rigidbody2D rb;
+    private Collider2D myCollider;
+
+
+
+
+
 
     void Start()
     {
+        skin = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        myCollider = GetComponent<Collider2D>();
+
         currentHp = maxHp;
         staminaLeft = stamina;
         isdead = false;
