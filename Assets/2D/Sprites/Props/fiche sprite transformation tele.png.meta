@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: 477360056e008844d840283af20d4326
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4756745055390024236
+    second: fiche sprite transformation tele_0
+  - first:
+      213: 71299487158399327
+    second: fiche sprite transformation tele_1
+  - first:
+      213: -5859728239435516952
+    second: fiche sprite transformation tele_2
+  - first:
+      213: 4054136192221382544
+    second: fiche sprite transformation tele_3
+  - first:
+      213: 5975380413405555676
+    second: fiche sprite transformation tele_4
+  - first:
+      213: 6683533932378185713
+    second: fiche sprite transformation tele_5
+  - first:
+      213: 5870043976564315695
+    second: fiche sprite transformation tele_6
+  - first:
+      213: -175046752269196164
+    second: fiche sprite transformation tele_7
+  - first:
+      213: -7093541428614386543
+    second: fiche sprite transformation tele_8
+  - first:
+      213: 5275065450362628921
+    second: fiche sprite transformation tele_9
+  - first:
+      213: -53614851977407779
+    second: fiche sprite transformation tele_10
+  - first:
+      213: 5423441350551934861
+    second: fiche sprite transformation tele_11
+  - first:
+      213: 8148755659809328707
+    second: fiche sprite transformation tele_12
+  - first:
+      213: 7514735547506402996
+    second: fiche sprite transformation tele_13
+  - first:
+      213: 8226901735800770646
+    second: fiche sprite transformation tele_14
+  - first:
+      213: 3446069633957581544
+    second: fiche sprite transformation tele_15
+  - first:
+      213: 7941030699039060852
+    second: fiche sprite transformation tele_16
+  - first:
+      213: -4872912448917672030
+    second: fiche sprite transformation tele_17
+  - first:
+      213: -2250514012185476292
+    second: fiche sprite transformation tele_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2b592e021028646b6dc8c8c4a2e068
+      internalID: -1057494748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_1
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9e5898d1648d14393c9ebc9c6349cc
+      internalID: 887402395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_2
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b007d3ccd63b4ef42a8b103182a1b0a3
+      internalID: 1916278608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_3
+      rect:
+        serializedVersion: 2
+        x: 3069
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d7948fa0cbea84bb414f89ae0bb66d
+      internalID: -931398279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_4
+      rect:
+        serializedVersion: 2
+        x: 4092
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21f147fb8161744b9d020a5961aee1e
+      internalID: 1952918052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_5
+      rect:
+        serializedVersion: 2
+        x: 5115
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb62f1005649954daf0f71869d2d204
+      internalID: 1630576297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_6
+      rect:
+        serializedVersion: 2
+        x: 6138
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8503a410abb736246ad60559b9d95930
+      internalID: 470186967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_7
+      rect:
+        serializedVersion: 2
+        x: 7161
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154d113725bab06498c9bd68f3edac81
+      internalID: -294267075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_8
+      rect:
+        serializedVersion: 2
+        x: 8184
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28481f781b2bee5469c86ae87a4f891d
+      internalID: -2120746558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation tele_9
+      rect:
+        serializedVersion: 2
+        x: 9207
+        y: 0
+        width: 1023
+        height: 839
+      alignment: 9
+      pivot: {x: 0.67, y: 0.27}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96130c6cec3703740a2fdc907f356cd7
+      internalID: -388006908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: adb2348fc0dcba246b796f7d8699572e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fiche sprite transformation tele_0: -1057494748
+      fiche sprite transformation tele_1: 887402395
+      fiche sprite transformation tele_2: 1916278608
+      fiche sprite transformation tele_3: -931398279
+      fiche sprite transformation tele_4: 1952918052
+      fiche sprite transformation tele_5: 1630576297
+      fiche sprite transformation tele_6: 470186967
+      fiche sprite transformation tele_7: -294267075
+      fiche sprite transformation tele_8: -2120746558
+      fiche sprite transformation tele_9: -388006908
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 8384157417623104865}
   - component: {fileID: 2966448111559858742}
   - component: {fileID: 4978726104506571083}
+  - component: {fileID: -5528317150938003298}
   m_Layer: 9
   m_Name: Vase
   m_TagString: Vase
@@ -157,7 +158,7 @@ SpriteRenderer:
   m_Size: {x: 3.22, y: 7.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &8384157417623104865
@@ -250,3 +251,25 @@ MonoBehaviour:
   maxFall: 2
   rb: {fileID: 2966448111559858742}
   _objects: 3
+--- !u!95 &-5528317150938003298
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145221940681007771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7432a7f1e693d1b45bf667d359adbb71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

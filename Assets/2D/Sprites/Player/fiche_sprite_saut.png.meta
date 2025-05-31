@@ -186,10 +186,10 @@ TextureImporter:
       name: fiche_sprite_saut_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1638
-        width: 377
-        height: 403
+        x: 0
+        y: 1429
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: fiche_sprite_saut_1
       rect:
         serializedVersion: 2
-        x: 403
-        y: 1563
-        width: 377
-        height: 476
+        x: 396
+        y: 1429
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +230,10 @@ TextureImporter:
       name: fiche_sprite_saut_2
       rect:
         serializedVersion: 2
-        x: 794
-        y: 1506
-        width: 376
-        height: 532
+        x: 792
+        y: 1429
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: fiche_sprite_saut_3
       rect:
         serializedVersion: 2
-        x: 1185
-        y: 1465
-        width: 376
-        height: 573
+        x: 1188
+        y: 1429
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: fiche_sprite_saut_4
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 1440
-        width: 376
-        height: 597
+        x: 1584
+        y: 1429
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: fiche_sprite_saut_5
       rect:
         serializedVersion: 2
-        x: 15
-        y: 815
-        width: 376
-        height: 605
+        x: 0
+        y: 810
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: fiche_sprite_saut_6
       rect:
         serializedVersion: 2
-        x: 406
-        y: 848
-        width: 376
-        height: 573
+        x: 396
+        y: 810
+        width: 396
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,7 +340,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 61ac2b87e520b2d49a3706e0c2f5c4a5
     internalID: 0
     vertices: []
     indices: 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 183550254949376882}
   - component: {fileID: 3658668261206446862}
   - component: {fileID: 5662551460605062430}
+  - component: {fileID: -2187822175771392758}
   m_Layer: 13
   m_Name: Box
   m_TagString: Box
@@ -189,3 +190,25 @@ MonoBehaviour:
   maxFall: 2
   rb: {fileID: 3658668261206446862}
   _objects: 1
+--- !u!95 &-2187822175771392758
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754906164563905714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fb50d4c41838ea489fa99e2be53dbc4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
