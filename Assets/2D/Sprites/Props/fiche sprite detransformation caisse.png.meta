@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,11 +131,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 4
+        width: 696
+        height: 551
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: fiche sprite detransformation caisse_1
       rect:
         serializedVersion: 2
-        x: 700
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 696
+        y: 4
+        width: 696
+        height: 551
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: fiche sprite detransformation caisse_2
       rect:
         serializedVersion: 2
-        x: 1400
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1392
+        y: 4
+        width: 696
+        height: 814
+      alignment: 9
+      pivot: {x: 0.52, y: 0.26}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: fiche sprite detransformation caisse_3
       rect:
         serializedVersion: 2
-        x: 2100
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2088
+        y: 4
+        width: 696
+        height: 749
+      alignment: 9
+      pivot: {x: 0.52, y: 0.29}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: fiche sprite detransformation caisse_4
       rect:
         serializedVersion: 2
-        x: 2800
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2784
+        y: 4
+        width: 696
+        height: 684
+      alignment: 9
+      pivot: {x: 0.52, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: fiche sprite detransformation caisse_5
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3480
+        y: 4
+        width: 696
+        height: 726
+      alignment: 9
+      pivot: {x: 0.54, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: fiche sprite detransformation caisse_6
       rect:
         serializedVersion: 2
-        x: 4200
-        y: 0
-        width: 700
-        height: 851
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4218
+        y: 4
+        width: 654
+        height: 551
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
