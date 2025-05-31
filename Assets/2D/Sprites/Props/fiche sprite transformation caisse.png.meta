@@ -1,0 +1,401 @@
+fileFormatVersion: 2
+guid: 4260ae077b7ca2a4d9a281ee617fab7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5127816339223335028
+    second: fiche sprite transformation caisse_0
+  - first:
+      213: -5750490819946463046
+    second: fiche sprite transformation caisse_1
+  - first:
+      213: 3195116186537698094
+    second: fiche sprite transformation caisse_2
+  - first:
+      213: -6763367320058696531
+    second: fiche sprite transformation caisse_3
+  - first:
+      213: -9128256575775674291
+    second: fiche sprite transformation caisse_4
+  - first:
+      213: -130279114907722166
+    second: fiche sprite transformation caisse_5
+  - first:
+      213: -6410729270288730806
+    second: fiche sprite transformation caisse_6
+  - first:
+      213: -7858782721908412163
+    second: fiche sprite transformation caisse_7
+  - first:
+      213: -1970873795689429895
+    second: fiche sprite transformation caisse_8
+  - first:
+      213: -5814681411401761438
+    second: fiche sprite transformation caisse_9
+  - first:
+      213: -8717535091498990358
+    second: fiche sprite transformation caisse_10
+  - first:
+      213: -7094487775411877691
+    second: fiche sprite transformation caisse_11
+  - first:
+      213: -753145861173801262
+    second: fiche sprite transformation caisse_12
+  - first:
+      213: 6602394796953944779
+    second: fiche sprite transformation caisse_13
+  - first:
+      213: 3040124603289036525
+    second: fiche sprite transformation caisse_14
+  - first:
+      213: 1802435412365244112
+    second: fiche sprite transformation caisse_15
+  - first:
+      213: 2815197446197549989
+    second: fiche sprite transformation caisse_16
+  - first:
+      213: 2707762218778930091
+    second: fiche sprite transformation caisse_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1238
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e265fe27d428f254284dc7c15769592e
+      internalID: -1157048756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_1
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 0
+        width: 1238
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a7c4a55de0c7d49a459aaca1ec98bb
+      internalID: 802654391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_2
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 0
+        width: 1238
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efbd95ed6f53c04f89b3177ffa3d30f
+      internalID: -991431331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_3
+      rect:
+        serializedVersion: 2
+        x: 4020
+        y: 0
+        width: 1238
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d855e80166a4542a532b68adf9328d
+      internalID: -1036731823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_4
+      rect:
+        serializedVersion: 2
+        x: 5360
+        y: 0
+        width: 1238
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53b83a78d6fe914e959da64e0e3a2d8
+      internalID: 1422692441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_5
+      rect:
+        serializedVersion: 2
+        x: 6700
+        y: 0
+        width: 1238
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ba3faff77cc3b4baae8df6d949c0fc
+      internalID: -172491626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_6
+      rect:
+        serializedVersion: 2
+        x: 8447
+        y: 0
+        width: 1006
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5cadaf20db1d29468b446645248be5b
+      internalID: 706013796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_7
+      rect:
+        serializedVersion: 2
+        x: 9749
+        y: 0
+        width: 1006
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4010220f0397bc47bb6b5ee4d170689
+      internalID: -1827864814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_8
+      rect:
+        serializedVersion: 2
+        x: 11060
+        y: 0
+        width: 1006
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a2eeee2caf1834b8e6762b48de3938
+      internalID: -1636766437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation caisse_9
+      rect:
+        serializedVersion: 2
+        x: 12304
+        y: 0
+        width: 1006
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d432f11f575f341448ade84c2b5cfb90
+      internalID: -139574662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 789224373694f77448baac168ffc726b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fiche sprite transformation caisse_0: -1157048756
+      fiche sprite transformation caisse_1: 802654391
+      fiche sprite transformation caisse_2: -991431331
+      fiche sprite transformation caisse_3: -1036731823
+      fiche sprite transformation caisse_4: 1422692441
+      fiche sprite transformation caisse_5: -172491626
+      fiche sprite transformation caisse_6: 706013796
+      fiche sprite transformation caisse_7: -1827864814
+      fiche sprite transformation caisse_8: -1636766437
+      fiche sprite transformation caisse_9: -139574662
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

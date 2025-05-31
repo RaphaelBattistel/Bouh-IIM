@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 7257307308673294541}
   - component: {fileID: 3466289277079762647}
   - component: {fileID: 3308299457562755899}
+  - component: {fileID: 1957713495876723340}
   m_Layer: 13
   m_Name: TV
   m_TagString: TV
@@ -150,12 +151,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5509753353421974763, guid: 8589143b842401e4b960f615e846330f, type: 3}
+  m_Sprite: {fileID: -12178445, guid: e8d937c8a13b53c4f898d471b313f7ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.25, y: 9.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -224,9 +225,9 @@ BoxCollider2D:
   m_Offset: {x: -0.05551195, y: -0.9149425}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.24, y: 9.71}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.28}
+    oldSize: {x: 13.820001, y: 15.481757}
+    newSize: {x: 9.25, y: 9.72}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -296,3 +297,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &1957713495876723340
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870852814782897045}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4495769651fca4b4181c5d80dea29243, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
