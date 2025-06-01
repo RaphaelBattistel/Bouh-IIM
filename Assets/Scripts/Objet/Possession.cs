@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Possession : MonoBehaviour
 {
+    [SerializeField] Animator anim;
 
     [SerializeField] private bool possessing = false;
 
@@ -24,7 +25,7 @@ public class Possession : MonoBehaviour
     private float fallSpeed;
     public Rigidbody2D rb;
     private CapsuleCollider2D _caps2d;
-    private Collider2D _col2d; 
+    private Collider2D _col2d;
 
     public enum OBJECTS
     {
@@ -46,7 +47,7 @@ public class Possession : MonoBehaviour
 
         _col2d = GetComponent<Collider2D>();
         playcont = GetComponent<PlayerController>();
-
+        anim = GetComponent<Animator>();
 
         _caps2d.enabled = false;
 
@@ -58,6 +59,10 @@ public class Possession : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)&&possessing)
         {
             ReleasePossession();
+            if(_objects == OBJECTS.BOX)
+                anim.SetBool("posBox", false);
+            else if(_objects == OBJECTS.TV)
+                anim.SetBool("posTV", false);
         }
 
         fallSpeed = lastY - transform.position.y;
@@ -70,27 +75,31 @@ public class Possession : MonoBehaviour
             rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
 
 
-            if (_objects == OBJECTS.BOX || _objects == OBJECTS.VASE)
+            if (_objects == OBJECTS.BOX)
             {
+                anim.SetBool("posBox", true);
                 Move();
 
-                if (_objects == OBJECTS.VASE)
-                {
-                    if (!wasGrounded && grounded)
-                    {
-                        // Atterrissage d�tect�, on v�rifie la vitesse de chute
-                        if (fallSpeed > maxFall && !isBrocken)
-                        {
-                            isBrocken = true;
-                            _caps2d.enabled = true;
-
-                        }
-                    }
-                    wasGrounded = grounded;
-                }
             }
+            else if (_objects == OBJECTS.VASE)
+            {
+                Move();
+                if (!wasGrounded && grounded)
+                {
+                    // Atterrissage d�tect�, on v�rifie la vitesse de chute
+                    if (fallSpeed > maxFall && !isBrocken)
+                    {
+                        isBrocken = true;
+                        _caps2d.enabled = true;
+
+                    }
+                }
+                wasGrounded = grounded;
+            }
+
             else if (_objects == OBJECTS.TV)
             {
+                anim.SetBool("posTV", true);
                 _caps2d.enabled = true;
             }
 
@@ -154,6 +163,7 @@ public class Possession : MonoBehaviour
         playcont.possessionTarget = transform;
         playcont.canBeHurted = false;
 
+
         if (playcont != null)
         {
             playcont.canJump = false;
@@ -170,6 +180,7 @@ public class Possession : MonoBehaviour
         possessing = false;
         playcont.canBeHurted = true;
         playcont.isPossessing = false;
+
 
         if (playcont != null)
         {

@@ -187,9 +187,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1429
-        width: 396
-        height: 619
+        y: 1431
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: fiche_sprite_saut_1
       rect:
         serializedVersion: 2
-        x: 396
-        y: 1429
-        width: 396
-        height: 619
+        x: 391
+        y: 1431
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +230,10 @@ TextureImporter:
       name: fiche_sprite_saut_2
       rect:
         serializedVersion: 2
-        x: 792
-        y: 1429
-        width: 396
-        height: 619
+        x: 782
+        y: 1431
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: fiche_sprite_saut_3
       rect:
         serializedVersion: 2
-        x: 1188
-        y: 1429
-        width: 396
-        height: 619
+        x: 1173
+        y: 1431
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: fiche_sprite_saut_4
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 1429
-        width: 396
-        height: 619
+        x: 1564
+        y: 1431
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,9 +297,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 810
-        width: 396
-        height: 619
+        y: 814
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: fiche_sprite_saut_6
       rect:
         serializedVersion: 2
-        x: 396
-        y: 810
-        width: 396
-        height: 619
+        x: 391
+        y: 814
+        width: 391
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

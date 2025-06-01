@@ -17,12 +17,13 @@ public class attackDist : MonoBehaviour
     private Vector3 direction;                  
     private float angleProjectil;               
 
-    private SpriteRenderer skin;                
-
+    private SpriteRenderer skin;
+    private Animator anim;
     
 
     void Start() {
-        skin = GetComponent<SpriteRenderer>();  
+        skin = GetComponent<SpriteRenderer>(); 
+        anim = GetComponent<Animator>();
         positionWeapon = weapon.localPosition;  
     }
 
@@ -46,6 +47,7 @@ public class attackDist : MonoBehaviour
        
         if (Input.GetButton("Fire2") && !reloading) 
         {
+            anim.SetTrigger("Shoot");
             reloading = true;
             projectilSave = Instantiate(projectil, weapon.position, Quaternion.Euler(0, 0, angleProjectil));
             projectilSave.GetComponent<Rigidbody2D>().linearVelocity = direction * speedProjectil;          

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System;
 
 
 public class PlayerController : MonoBehaviour
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer skin;
     private Rigidbody2D rb;
     private Collider2D myCollider;
-
+    private Animator anim;
 
 
 
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
         skin = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
 
         currentHp = maxHp;
         staminaLeft = stamina;
@@ -122,10 +124,18 @@ public class PlayerController : MonoBehaviour
             staminaBar.transform.localScale = new Vector2(staminaLeft / stamina, staminaBar.transform.localScale.y);
         }
         isControlling();
+
+        animCheck();
     }
 
 
-
+    private void animCheck()
+    {
+        anim.SetFloat("VelocityX", MathF.Abs(rb.linearVelocity.x));
+        anim.SetFloat("VelocityY", rb.linearVelocity.y);
+        anim.SetBool("Grounded", IsGrounded());
+        anim.SetBool("Wall", wallcheck);
+    }
 
     public void wallmode(InputAction.CallbackContext context)
     {
@@ -224,6 +234,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") && canBeHurted)
         {
+            anim.SetTrigger("Hurt");
             canMove = false;
             if (currentHp != 1)
             {
