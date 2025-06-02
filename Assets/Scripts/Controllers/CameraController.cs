@@ -6,27 +6,24 @@ namespace A1_24_25
 {
     public class CameraController : MonoBehaviour
     {
-        public Transform Target => _player ? _player?.transform : _target; 
-            
+        public Transform Target => _player ? _player?.transform : _target;
+
         [Header("FOLLOW")]
         [SerializeField] private Transform _target;
         [SerializeField] private Vector2 _sizeBoxCast;
         [SerializeField] private Vector2 _offsetBoxCast;
-        [Range(0,1)][SerializeField] private float _smoothTime = .1f;
+        [Range(0, 1)][SerializeField] private float _smoothTime = .1f;
 
         private Vector2 _velocity;
         private PlayerController _player;
 
-        private void Awake()
+        private void Start()
         {
-            _target = FindObjectOfType<PlayerControllers>().transform;
+            // _target = FindObjectOfType<PlayerController>().transform;
             _target.TryGetComponent(out _player);
         }
 
-        void Start()
-        {
-        
-        }
+
 
         void Update()
         {
@@ -68,6 +65,30 @@ namespace A1_24_25
             Gizmos.DrawWireCube(offsetPos, _sizeBoxCast * 2);
             Gizmos.DrawLine(offsetPos + Vector3.left * sizeCross, offsetPos + Vector3.right * sizeCross);
             Gizmos.DrawLine(offsetPos + Vector3.down * sizeCross, offsetPos + Vector3.up * sizeCross);
+        }
+
+        public void ShakeCamera(float duration, float magnitude)
+        {
+            StartCoroutine(Shake(duration, magnitude));
+        }
+        
+        private IEnumerator Shake(float duration, float magnitude)
+        {
+            Vector3 originalPosition = transform.localPosition;
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                float x = Random.Range(-1f, 1f) * magnitude;
+                float y = Random.Range(-1f, 1f) * magnitude;
+
+                transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+
+                elapsed += Time.deltaTime;
+                yield return null;  // Attend la frame suivante sans bloquer
+            }
+
+            transform.localPosition = originalPosition;  
         }
     }
 }

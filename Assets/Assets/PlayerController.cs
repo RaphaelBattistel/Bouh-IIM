@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
-
+using A1_24_25;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float stamina;
     public float staminaLeft;
     public EnemyController EnemyController;
+    private CameraController CameraController;
     public float maxHp;
     public float currentHp;
     private bool isdead;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         staminaLeft = stamina;
         isdead = false;
         lastChekpoint.position = transform.position;
+        CameraController = FindObjectOfType<CameraController>();
     }
     public void movement(InputAction.CallbackContext context)
     {
@@ -166,6 +168,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
+            CameraController.ShakeCamera(0.3f, 2f);
             canMove = false;
             if (currentHp != 1)
             {

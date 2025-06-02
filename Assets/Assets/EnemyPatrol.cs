@@ -4,87 +4,88 @@ public class EnemyPatrol : MonoBehaviour
 {
     public Transform pointA;
     public Transform pointB;
-    public float speed = 2f;
-    private float savespeed;
-    public float viewDistance = 5f;
-    public Vector2 viewBoxSize = new Vector2(2f, 1f);
     public Transform player;
+    public float speed = 2f;
+    public float chaseSpeed = 4f;
+    public float viewDistance = 5f;
+    public Vector2 visionSize = new Vector2(2f, 1f);
 
-    private Vector3 currentTarget;
-    private SpriteRenderer spriteRenderer;
-    private bool returningToZone = false;
-    private float fixedY;
+    private Vector3 targetPoint;
+    private SpriteRenderer sr;
+    private float baseY;
+    private bool goingBack = false;
+    private float normalSpeed;
 
     void Start()
     {
-        savespeed = speed   ;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        currentTarget = pointB.position;
-        fixedY = transform.position.y;
+        sr = GetComponent<SpriteRenderer>();
+        targetPoint = pointB.position;
+        baseY = transform.position.y;
+        normalSpeed = speed;
     }
 
     void Update()
     {
-        if (!IsInsideLimits(transform.position))
+        if (!IsInZone(transform.position))
         {
-            returningToZone = true;
-            ReturnToZone();
+            goingBack = true;
+            GoBackToZone();
             return;
         }
 
-        if (returningToZone)
+        if (goingBack)
         {
-            returningToZone = false;
-            currentTarget = ClosestPatrolPoint().position;
+            goingBack = false;
+            targetPoint = GetClosestPoint().position;
         }
 
-        if (CanSeePlayer() && IsInsideLimits(player.position))
+        if (CanSeePlayer() && IsInZone(player.position))
         {
-            speed=4f;
-            ChasePlayer();
+            speed = chaseSpeed;
+            Chase();
         }
         else
         {
+            speed = normalSpeed;
             Patrol();
-            speed = savespeed;
         }
     }
 
     void Patrol()
     {
-        Vector3 targetPos = new Vector3(currentTarget.x, fixedY, transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        spriteRenderer.flipX = (targetPos.x < transform.position.x);
+        Vector3 target = new Vector3(targetPoint.x, baseY, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        sr.flipX = target.x < transform.position.x;
 
-        if (Vector3.Distance(transform.position, targetPos) < 0.1f)
+        if (Vector3.Distance(transform.position, target) < 0.1f)
         {
-            currentTarget = currentTarget == pointA.position ? pointB.position : pointA.position;
+            targetPoint = targetPoint == pointA.position ? pointB.position : pointA.position;
         }
     }
 
-    void ChasePlayer()
+    void Chase()
     {
-        Vector3 targetPos = new Vector3(player.position.x, fixedY, transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        spriteRenderer.flipX = (player.position.x < transform.position.x);
+        Vector3 playerPos = new Vector3(player.position.x, baseY, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
+        sr.flipX = player.position.x < transform.position.x;
     }
 
-    void ReturnToZone()
+    void GoBackToZone()
     {
-        Transform closestPoint = ClosestPatrolPoint();
-        Vector3 targetPos = new Vector3(closestPoint.position.x, fixedY, transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        spriteRenderer.flipX = (targetPos.x < transform.position.x);
+        Transform close = GetClosestPoint();
+        Vector3 backPos = new Vector3(close.position.x, baseY, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, backPos, speed * Time.deltaTime);
+        sr.flipX = backPos.x < transform.position.x;
     }
 
-    bool IsInsideLimits(Vector3 pos)
+    bool IsInZone(Vector3 pos)
     {
-        float minX = Mathf.Min(pointA.position.x, pointB.position.x);
-        float maxX = Mathf.Max(pointA.position.x, pointB.position.x);
-        return pos.x >= minX && pos.x <= maxX;
+        float left = Mathf.Min(pointA.position.x, pointB.position.x);
+        float right = Mathf.Max(pointA.position.x, pointB.position.x);
+        return pos.x >= left && pos.x <= right;
     }
 
-    Transform ClosestPatrolPoint()
+    Transform GetClosestPoint()
     {
         float distA = Vector3.Distance(transform.position, pointA.position);
         float distB = Vector3.Distance(transform.position, pointB.position);
@@ -93,11 +94,10 @@ public class EnemyPatrol : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        Vector2 direction = spriteRenderer.flipX ? Vector2.left : Vector2.right;
+        Vector2 dir = sr.flipX ? Vector2.left : Vector2.right;
         Vector2 origin = transform.position;
 
-        RaycastHit2D hit = Physics2D.BoxCast(origin, viewBoxSize, 0f, direction, viewDistance, LayerMask.GetMask("Player"));
-
+        RaycastHit2D hit = Physics2D.BoxCast(origin, visionSize, 0f, dir, viewDistance, LayerMask.GetMask("Player"));
         return hit.collider != null && hit.collider.transform == player;
     }
 }
