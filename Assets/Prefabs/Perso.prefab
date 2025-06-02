@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4198876877264287490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16, y: -3.12, z: 0.1275317}
+  m_LocalPosition: {x: -0.16, y: -3.23, z: 0.1275317}
   m_LocalScale: {x: 2.6014569, y: 2.6014569, z: 2.6014569}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -202,8 +202,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bf4766689bdc64cbf09a4182d858bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Stat>k__BackingField:
+    life: 0
+    stamina: 0
+    damage: 0
+    speedMove: 0
+    forceJump: 0
   jumpower: 10
-  speed: 5
   fallingSpeed: 1
   fallingDirection: 0
   canJump: 1
@@ -212,6 +217,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8328
   canMove: 1
+  speed: 5
   wallLayer:
     serializedVersion: 2
     m_Bits: 512

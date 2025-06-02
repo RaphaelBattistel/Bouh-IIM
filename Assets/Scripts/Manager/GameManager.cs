@@ -10,11 +10,15 @@ public class GameManager : MonoBehaviour
 
     private List<BlocController> blocs = new();
 
-    public TextMeshProUGUI WinText;
+    public Canvas win;
+    [SerializeField] private Canvas pause;
+
+    [SerializeField] private bool gameIsPaused;
+    //public TextMeshProUGUI WinText;
 
     private void Awake()
     {
-        WinText.gameObject.SetActive(false);
+        
         if (instance == null)
             instance = this;
         else
@@ -22,7 +26,27 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        
         blocs.AddRange(FindObjectsOfType<BlocController>());
+    }
+    private void Start()
+    {
+        win.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Paused();
+            }
+        }
     }
 
     public void ToggleStopBloc()
@@ -35,6 +59,20 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        WinText.gameObject.SetActive(true);
+        win.gameObject.SetActive(true);
+    }
+
+    public void Paused()
+    {
+        pause.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        gameIsPaused = true;
+    }
+
+    public void Resume()
+    {
+        pause.gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
+        gameIsPaused = false;
     }
 }
