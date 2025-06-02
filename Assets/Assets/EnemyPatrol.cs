@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
@@ -14,11 +15,13 @@ public class EnemyPatrol : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool returningToZone = false;
     private float fixedY;
+    private Collider2D coll2d;
 
     void Start()
     {
         savespeed = speed   ;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        coll2d = GetComponent<Collider2D>();
         currentTarget = pointB.position;
         fixedY = transform.position.y;
     }
@@ -100,4 +103,5 @@ public class EnemyPatrol : MonoBehaviour
 
         return hit.collider != null && hit.collider.transform == player;
     }
+
 }

@@ -6,9 +6,10 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    [field: SerializeField] public Stats Stat { get; private set; }
+
     [Header("JUMP")]
     [SerializeField] private float jumpower;
-    public float speed;
     [SerializeField] private float fallingSpeed;
     [SerializeField] private float fallingDirection;
     public bool canJump = true;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("MOVE")]
     public bool canMove = true;
+    public float speed;
     float horizontal;
 
     [Header("WALL")]
