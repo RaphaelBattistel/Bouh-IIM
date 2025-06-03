@@ -6,6 +6,7 @@ public class ButtonController : MonoBehaviour
     public float moveSpeed = 2f; 
 
     public bool isPressed = false;
+
     private bool porte=true;
 
     void Update()
@@ -14,18 +15,18 @@ public class ButtonController : MonoBehaviour
         if (isPressed)
         {
             door.transform.position = Vector2.Lerp(door.transform.position, new Vector2(door.transform.position.x, door.transform.position.y + door.transform.localScale.y), moveSpeed * Time.deltaTime);
-            isPressed = false; 
+            if (door.transform.position.y >= door.transform.localScale.y)
+                isPressed = false;
         }
         
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Box") && porte)
         {
             isPressed = true;
             porte = false;
         }
-
     }
 }

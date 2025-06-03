@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public Canvas win;
     [SerializeField] private Canvas pause;
+    [SerializeField] private Canvas settings;
 
     [SerializeField] private bool gameIsPaused;
     //public TextMeshProUGUI WinText;
@@ -74,5 +74,10 @@ public class GameManager : MonoBehaviour
         pause.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         gameIsPaused = false;
+    }
+
+    public void Settings()
+    {
+        settings.gameObject.SetActive(true);
     }
 }

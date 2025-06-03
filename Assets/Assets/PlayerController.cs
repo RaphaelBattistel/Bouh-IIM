@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public Stats Stat { get; private set; }
 
     [Header("JUMP")]
-    [SerializeField] private float jumpower;
-    [SerializeField] private float fallingSpeed;
     [SerializeField] private float fallingDirection;
     public bool canJump = true;
     [SerializeField] private Transform groundCheck;
@@ -19,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("MOVE")]
     public bool canMove = true;
-    public float speed;
     float horizontal;
 
     [Header("WALL")]
@@ -29,12 +26,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool walltoggle;
 
     [Header("STAMINA")]
-    [SerializeField] private float stamina;
     [SerializeField] private float staminaLeft;
     [SerializeField] private GameObject staminaBar;
 
     [Header("LIFE")]
-    [SerializeField] private float maxHp;
     [SerializeField] private float currentHp;
     private bool isdead;
     public bool canBeHurted = true;
@@ -67,8 +62,8 @@ public class PlayerController : MonoBehaviour
         myCollider = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
 
-        currentHp = maxHp;
-        staminaLeft = stamina;
+        currentHp = Stat.life;
+        staminaLeft = Stat.stamina;
         isdead = false;
         lastChekpoint.position = transform.position;
         canBeHurted = true;
@@ -78,17 +73,17 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Q))
         {
-            rb.linearVelocity = new Vector2(1 * speed, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(1 * Stat.speedMove, rb.linearVelocity.y);
 
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            rb.linearVelocity = new Vector2(-1 * speed, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(-1 * Stat.speedMove, rb.linearVelocity.y);
         }
     }
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontal * speed, fallingSpeed * rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(horizontal * Stat.speedMove, Stat.fallingSpeed * rb.linearVelocity.y);
         if (walltriger == true && staminaLeft > 0)
         {
             staminaLeft -= 0.25f;
@@ -123,7 +118,7 @@ public class PlayerController : MonoBehaviour
         }
         if (staminaLeft > 0)
         {
-            staminaBar.transform.localScale = new Vector2(staminaLeft / stamina, staminaBar.transform.localScale.y);
+            staminaBar.transform.localScale = new Vector2(staminaLeft / Stat.stamina, staminaBar.transform.localScale.y);
         }
         isControlling();
 
@@ -170,7 +165,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && IsGrounded() && !isdead)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpower);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Stat.forceJump);
 
         }
     }
@@ -189,8 +184,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.OverlapCapsule(groundCheck.position, new Vector2(.5f, .1f), CapsuleDirection2D.Horizontal, 0, enemyLayer) && !isdead)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpower);
-            staminaLeft = stamina;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Stat.forceJump);
+            staminaLeft = Stat.stamina;
         }
     }
     public void isControlling()
@@ -218,19 +213,19 @@ public class PlayerController : MonoBehaviour
 
         if (fallingDirection < 0)
         {
-            fallingSpeed = 0.5f;
+            Stat.fallingSpeed = 0.7f;
         }
         else
         {
-            fallingSpeed = 1f;
+            Stat.fallingSpeed = 1f;
         }
     }
 
     public void dead()
     {
         transform.position = lastChekpoint.position;
-        currentHp = maxHp;
-        staminaLeft = stamina;
+        currentHp = Stat.life;
+        staminaLeft = Stat.stamina;
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
