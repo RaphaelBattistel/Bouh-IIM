@@ -203,13 +203,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Stat>k__BackingField:
-    life: 0
-    stamina: 0
-    damage: 0
-    speedMove: 0
-    forceJump: 0
-  jumpower: 10
-  fallingSpeed: 1
+    life: 3
+    stamina: 20
+    speedMove: 10
+    forceJump: 11
+    fallingSpeed: 1
   fallingDirection: 0
   canJump: 1
   groundCheck: {fileID: 7606645014830082698}
@@ -217,17 +215,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8328
   canMove: 1
-  speed: 5
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
   walltriger: 0
   wallcheck: 0
   walltoggle: 0
-  stamina: 10
   staminaLeft: 0
   staminaBar: {fileID: 0}
-  maxHp: 3
   currentHp: 0
   canBeHurted: 1
   hearth1: {fileID: 0}

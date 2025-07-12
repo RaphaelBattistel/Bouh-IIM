@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fiche sprite degat_0: -2664326422576439430
+      fiche sprite degat_1: 3419600076029853424
+      fiche sprite degat_2: 7231199889152040053
+      fiche sprite degat_3: 6892611842302479367
+      fiche sprite degat_4: 5256629167132556393
+      fiche sprite degat_5: 8614523107720242181
+      fiche sprite degat_6: 3787240164189752324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
