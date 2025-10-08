@@ -8,6 +8,7 @@ TagManager:
   - Box
   - TV
   - Shoot
+  - Vase
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Enemy
+  - 
   - Ground
   - Player
   - Wall
@@ -40,11 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - UI
   m_SortingLayers:
   - name: Default
     uniqueID: 0

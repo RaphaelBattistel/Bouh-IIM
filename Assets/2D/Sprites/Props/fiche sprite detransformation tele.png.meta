@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: e8d937c8a13b53c4f898d471b313f7ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8398633168266528270
+    second: fiche sprite detransformation tele_0
+  - first:
+      213: -4873281093668973265
+    second: fiche sprite detransformation tele_1
+  - first:
+      213: -3411822300925685124
+    second: fiche sprite detransformation tele_2
+  - first:
+      213: -5604184400146404251
+    second: fiche sprite detransformation tele_3
+  - first:
+      213: 601274752608539373
+    second: fiche sprite detransformation tele_4
+  - first:
+      213: 7935201710724430431
+    second: fiche sprite detransformation tele_5
+  - first:
+      213: -6395899193410101502
+    second: fiche sprite detransformation tele_6
+  - first:
+      213: 9011759270223509333
+    second: fiche sprite detransformation tele_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f117788af8e04d648a0a1bb916809dd2
+      internalID: -63608555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_1
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb2f77d7efb1da4bbe023483e5c7f9b
+      internalID: 1211542608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_2
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e70abb313c6ff1449eb6f40f24da3a7
+      internalID: -579048529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_3
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86eeb26081fff18419c8e3450f555532
+      internalID: -290781699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_4
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dc8fbf38bb9c24090c6b6a5aa1db8b
+      internalID: 1534387876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_5
+      rect:
+        serializedVersion: 2
+        x: 3455
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d450230df77e1c643b0b5b6f63f12e4e
+      internalID: 1336873599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite detransformation tele_6
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 0
+        width: 691
+        height: 774
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dc11ab319eb674781fb914f532ffd8
+      internalID: -12178445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8e48f48d7eeca8749b1f925b3f6ad76f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fiche sprite detransformation tele_0: -63608555
+      fiche sprite detransformation tele_1: 1211542608
+      fiche sprite detransformation tele_2: -579048529
+      fiche sprite detransformation tele_3: -290781699
+      fiche sprite detransformation tele_4: 1534387876
+      fiche sprite detransformation tele_5: 1336873599
+      fiche sprite detransformation tele_6: -12178445
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

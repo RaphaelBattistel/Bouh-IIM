@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: bd99a22189bdaf44cb141eca7df8e9c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8614951281989002272
+    second: fiche sprite transformation vase_0
+  - first:
+      213: 4245727254663108191
+    second: fiche sprite transformation vase_1
+  - first:
+      213: 4672853437649721940
+    second: fiche sprite transformation vase_2
+  - first:
+      213: -9030009877869954355
+    second: fiche sprite transformation vase_3
+  - first:
+      213: -1785573840930787201
+    second: fiche sprite transformation vase_4
+  - first:
+      213: -7201298458960005328
+    second: fiche sprite transformation vase_5
+  - first:
+      213: -515226001530172756
+    second: fiche sprite transformation vase_6
+  - first:
+      213: -8426781503559325466
+    second: fiche sprite transformation vase_7
+  - first:
+      213: 4998810326433465692
+    second: fiche sprite transformation vase_8
+  - first:
+      213: 1069091123100508853
+    second: fiche sprite transformation vase_9
+  - first:
+      213: -7603970149519376711
+    second: fiche sprite transformation vase_10
+  - first:
+      213: -6179576370724521981
+    second: fiche sprite transformation vase_11
+  - first:
+      213: 2914396762201807941
+    second: fiche sprite transformation vase_12
+  - first:
+      213: -5851716793378214082
+    second: fiche sprite transformation vase_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8164f042862195f479b376e1fff81c41
+      internalID: -1729219420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_1
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe73e8ef623bd0479fadc7675b42dcc
+      internalID: 1369789800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_2
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d1a43ba09813245936f568aa5ec925
+      internalID: 931691030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_3
+      rect:
+        serializedVersion: 2
+        x: 2514
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377e7b3eed173b1489e8f9e8ad02f446
+      internalID: 1522419027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_4
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd548d7156878f408c9b4e2481ef377
+      internalID: -1936772232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_5
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f729454b051ca41b9eb082db2843c0
+      internalID: 7753304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_6
+      rect:
+        serializedVersion: 2
+        x: 5028
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f1e13d00527544bbebc331c4a4d73e
+      internalID: -934208474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_7
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d157edae094c9d479130c945419491e
+      internalID: -1423720034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fiche sprite transformation vase_8
+      rect:
+        serializedVersion: 2
+        x: 6704
+        y: 0
+        width: 838
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f89dc15367d5bd4091603de4977d38a
+      internalID: -1973815825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 35c07801d44219d4eb6c2537442be008
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fiche sprite transformation vase_0: -1729219420
+      fiche sprite transformation vase_1: 1369789800
+      fiche sprite transformation vase_2: 931691030
+      fiche sprite transformation vase_3: 1522419027
+      fiche sprite transformation vase_4: -1936772232
+      fiche sprite transformation vase_5: 7753304
+      fiche sprite transformation vase_6: -934208474
+      fiche sprite transformation vase_7: -1423720034
+      fiche sprite transformation vase_8: -1973815825
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
