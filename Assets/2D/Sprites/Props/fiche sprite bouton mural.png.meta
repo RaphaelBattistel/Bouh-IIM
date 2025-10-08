@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fiche sprite bouton mural_0: -1974093207684035766
+      fiche sprite bouton mural_1: -4031588415470043686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

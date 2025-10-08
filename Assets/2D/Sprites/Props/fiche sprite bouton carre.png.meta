@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fiche sprite bouton carre_0: 7115794053201236877
+      fiche sprite bouton carre_1: 8466050099312863580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

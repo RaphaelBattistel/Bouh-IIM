@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fiche sprite bouton rond_0: 6564269982073790612
+      fiche sprite bouton rond_1: -252460384540567709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

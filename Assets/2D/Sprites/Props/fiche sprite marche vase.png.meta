@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fiche sprite marche vase_0: 4983182246293225016
+      fiche sprite marche vase_1: -3440206757671572347
+      fiche sprite marche vase_2: 3905506367034889207
+      fiche sprite marche vase_3: 5652698451657392895
+      fiche sprite marche vase_4: -3578216397455938444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
